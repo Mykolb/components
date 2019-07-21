@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// Must reference props.children or children passed from parent will not show up
 export const ApprovalCard = (props) => {
     console.log(props.children)
  return(

@@ -10,6 +10,15 @@ import 'semantic-ui-css/semantic.min.css';
 const App = () => {
     return(
         <div className='ui container comments'>
+            <ApprovalCard >
+                <div>
+                <h2>Attention!</h2>
+                Would you like to add a post?
+                </div>
+
+
+            </ApprovalCard>
+
             <ApprovalCard> 
             <CommentDetail 
             author='Sam'
