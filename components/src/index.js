@@ -1,24 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import faker from 'faker';
+import CommentDetail from './CommentDetail'; //relative path b/c it is in the same folder; webpack auto attempts to find files using JS so you don't have to add it
 
 
+
+// created props here first
 const App = () => {
     return(
         <div className='ui container comments'>
-            <div className='comment'>
-                <a href='/' className='avatar'>
-                    <img    alt='avatar' />
-                </a>
-                <div className='content'>
-                    <a href='/' className='author'>
-                        Sam
-                    </a>
-                    <div className='metadata'>
-                        <span className='date'>Today at 3:00pm</span>
-                    </div>
-                    <div className='text'>Nice blog post!</div>
-                </div>
-            </div>
+            <CommentDetail 
+            author='Sam'
+            timeAgo='Today at 3:00pm'
+            comment='What up!'
+            avatar={faker.image.avatar()}
+            />
+            <CommentDetail
+             author='Ted'
+             timeAgo='Today at 4:45pm'
+             comment='First day of work'
+             avatar={faker.image.avatar()}
+             />
+            <CommentDetail
+             author='Mel'
+             timeAgo='Today at 5:50pm'
+             comment='Hanging with friends'
+             avatar={faker.image.avatar()}
+            />
         </div>
     )
 }
